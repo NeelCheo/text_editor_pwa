@@ -12,13 +12,12 @@ const initdb = async () =>
     },
   });
 
-  export const putDb = async (content) => {
-    const db = await initdb();
-    const tx = db.transaction('jate', 'readwrite');
-    tx.store.put({ content }, 1);
-    return tx.done;
-  };
-  
+export const putDb = async (content) => {
+  const db = await initdb();
+  const tx = db.transaction('jate', 'readwrite');
+  tx.store.add({ content });
+  return tx.done;
+};
 
 export const getDb = async () => {
   const db = await initdb();
@@ -28,3 +27,5 @@ export const getDb = async () => {
 };
 
 initdb();
+
+
