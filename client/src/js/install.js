@@ -1,4 +1,5 @@
 let deferredPrompt; // To save the beforeinstallprompt event
+const butInstall = document.getElementById('buttonInstall'); // Install button
 
 // Event handler for beforeinstallprompt event
 window.addEventListener('beforeinstallprompt', (event) => {
