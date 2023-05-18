@@ -15,7 +15,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html',
+      template: './index.html',
       filename: './index.html'
     }),
     new WebpackPwaManifest({
@@ -34,7 +34,7 @@ module.exports = {
       }]
     }),
     new InjectManifest({
-      swSrc: './src/src-sw.js'
+      swSrc: './src-sw.js'
     })
   ],
   module: {
