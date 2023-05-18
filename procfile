@@ -1,0 +1,4 @@
+"scripts": {
+    "start": "npm run",
+    "heroku-postbuild": "webpack --mode production"
+}
